@@ -4,103 +4,113 @@ def load_css():
     st.markdown("""
     <style>
 
-    /* App Background */
+    /* ----------------------------------------------------
+       Global App
+    ---------------------------------------------------- */
     .stApp {
-        background: #F5F7FB;
-        color: #1F2937;
+        background-color: #F8FAFC !important;
+        color: #1E293B !important;
     }
 
-    /* Hide Streamlit chrome */
-    #MainMenu, header, footer {
+    /* Hide Streamlit Header & Footer */
+    #MainMenu,
+    header,
+    footer {
         visibility: hidden;
     }
 
-    /* Sidebar */
-    section[data-testid="stSidebar"] {
-        background: #FFFFFF;
-        border-right: 1px solid #E5E7EB;
+    /* ----------------------------------------------------
+       Sidebar
+    ---------------------------------------------------- */
+    section[data-testid="stSidebar"]{
+        background-color:#FFFFFF !important;
+        border-right:1px solid #E5E7EB;
     }
 
-    /* Buttons */
-    .stButton > button {
-        border-radius: 10px;
-        font-weight: 600;
-        padding: 0.6rem 1rem;
-        transition: all 0.25s ease;
+    /* Force ALL sidebar text to be dark */
+    section[data-testid="stSidebar"] *{
+        color:#1E293B !important;
     }
 
-    .stButton > button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 16px rgba(37,99,235,0.18);
+    section[data-testid="stSidebar"] label{
+        color:#1E293B !important;
     }
 
-    /* Inputs */
-    .stSelectbox, .stNumberInput, .stTextInput {
-        border-radius: 10px;
+    section[data-testid="stSidebar"] p,
+    section[data-testid="stSidebar"] span,
+    section[data-testid="stSidebar"] div{
+        color:#1E293B !important;
     }
 
-    /* Metric Cards */
-    .metric-card {
-        background: #FFFFFF;
-        border-radius: 16px;
-        padding: 20px;
-        border-left: 5px solid #2563EB;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-        transition: all 0.25s ease;
-        margin-bottom: 15px;
+    /* Sidebar Logo */
+    section[data-testid="stSidebar"] img{
+        border-radius:12px;
     }
 
-    .metric-card:hover {
-        transform: translateY(-4px);
+    /* ----------------------------------------------------
+       Buttons
+    ---------------------------------------------------- */
+    .stButton > button{
+        width:100%;
+        border-radius:12px;
+        border:none;
+        background:#2563EB;
+        color:white;
+        font-weight:600;
+        padding:0.6rem 1rem;
+        transition:0.3s;
     }
 
-    .metric-value {
-        font-size: 32px;
-        font-weight: 700;
-        color: #2563EB;
+    .stButton > button:hover{
+        background:#1D4ED8;
+        transform:translateY(-2px);
+        box-shadow:0 8px 20px rgba(37,99,235,.25);
     }
 
-    .metric-title {
-        font-size: 15px;
-        color: #6B7280;
+    /* ----------------------------------------------------
+       Metrics
+    ---------------------------------------------------- */
+    div[data-testid="stMetric"]{
+        background:white;
+        border-radius:14px;
+        padding:18px;
+        border:1px solid #E5E7EB;
+        box-shadow:0 5px 15px rgba(0,0,0,.05);
     }
 
-    /* Generic Cards */
-    .custom-card {
-        background: #FFFFFF;
-        border-radius: 16px;
-        padding: 24px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-        border: 1px solid #EEF2F7;
-        margin: 16px 0;
+    /* ----------------------------------------------------
+       DataFrames
+    ---------------------------------------------------- */
+    div[data-testid="stDataFrame"]{
+        border-radius:12px;
+        overflow:hidden;
+        border:1px solid #E5E7EB;
     }
 
-    /* Section Titles */
-    .section-title {
-        font-size: 28px;
-        font-weight: 700;
-        color: #1E3A8A;
-        margin-bottom: 10px;
+    /* ----------------------------------------------------
+       Images
+    ---------------------------------------------------- */
+    img{
+        border-radius:12px;
     }
 
-    /* Horizontal Rule */
-    hr {
-        border: none;
-        border-top: 1px solid #E5E7EB;
-        margin: 1.2rem 0;
+    /* ----------------------------------------------------
+       Horizontal Line
+    ---------------------------------------------------- */
+    hr{
+        border:none;
+        border-top:1px solid #E5E7EB;
+        margin:1rem 0;
     }
 
-    /* Images */
-    img {
-        border-radius: 12px;
-    }
-
-    /* Footer */
-    .footer {
-        text-align: center;
-        color: #6B7280;
-        padding: 20px;
-        font-size: 14px;
+    /* ----------------------------------------------------
+       Footer
+    ---------------------------------------------------- */
+    .footer{
+        text-align:center;
+        color:#6B7280;
+        padding:20px;
+        font-size:14px;
     }
 
     </style>
