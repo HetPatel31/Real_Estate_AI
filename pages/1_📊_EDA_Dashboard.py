@@ -10,7 +10,9 @@ st.set_page_config(
     layout="wide"
 )
 
+# --------------------------------------------------
 # Load Global CSS
+# --------------------------------------------------
 load_css()
 
 # --------------------------------------------------
@@ -26,9 +28,9 @@ st.sidebar.markdown("---")
 # --------------------------------------------------
 st.title("📊 Exploratory Data Analysis")
 
-st.markdown("""
-This page presents the exploratory data analysis performed on the real estate dataset.
-""")
+st.markdown(
+    "This page presents the exploratory data analysis performed on the real estate dataset."
+)
 
 st.markdown("---")
 
@@ -57,12 +59,12 @@ st.image(
 st.markdown("---")
 
 # --------------------------------------------------
-# Price by City & BHK
+# City & BHK
 # --------------------------------------------------
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("🏙️ Price by City")
+    st.subheader("🏙 Price by City")
     st.image(
         "images/price_by_city.png",
         use_container_width=True
